@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Skill-Z’s English Communication Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skill-Z English Communication Lab</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
       background: #f4f6f8;
@@ -14,16 +24,24 @@
     }
 
     header {
-      background: linear-gradient(135deg, #004aad, #0078ff);
+      background: linear-gradient(-45deg, #004aad, #0078ff, #0096ff, #00cfff);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
       color: white;
       text-align: center;
       padding: 3rem 1rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header h1 {
-      margin: 0 0 1rem;
       font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     header h2 {
@@ -49,19 +67,22 @@
     ul {
       list-style: none;
       padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
     }
 
     ul li {
-      margin: 0.75rem 0;
-      padding-left: 2rem;
+      background: #f0f8ff;
+      padding: 1rem;
+      border-left: 5px solid #0078ff;
+      border-radius: 8px;
       position: relative;
-      font-size: 1.05rem;
     }
 
-    ul li::before {
-      content: '✔️';
-      position: absolute;
-      left: 0;
+    ul li i {
+      color: #004aad;
+      margin-right: 0.5rem;
     }
 
     .highlight {
@@ -74,7 +95,7 @@
       margin-top: 2rem;
     }
 
-    .cta button {
+    .cta a button {
       background: #004aad;
       color: white;
       border: none;
@@ -87,7 +108,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
-    .cta button:hover {
+    .cta a button:hover {
       background: #002f73;
       transform: scale(1.05);
     }
@@ -98,29 +119,37 @@
       font-size: 0.9rem;
       color: #666;
     }
+
+    .bonus-section {
+      background: #fff8e1;
+      border-left: 6px solid #ffc107;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to Skill-Z’s English Communication Lab</h1>
+  <header data-aos="fade-down">
+    <h1>Skill-Z’s English Communication Lab</h1>
     <p>The Ultimate Spoken English Course for Kids & Teens (Ages 8–20)</p>
     <h2>Speak like a pro. Sound like a native. Learn like never before.</h2>
   </header>
 
-  <section class="section">
+  <section class="section" data-aos="fade-up">
     <h2>What You'll Learn</h2>
     <ul>
-      <li>Speak Like Americans – Learn natural pronunciation and accent techniques</li>
-      <li>Build Real Sentences – Practice sentence construction with real-life situations</li>
-      <li>Perfect Your Pronunciation – Master the sounds of English with expert guidance</li>
-      <li>Learn Everyday Vocabulary – Use words and phrases people actually say</li>
-      <li>Use Phrases & Expressions – Speak fluently with idioms, slang, and expressions</li>
-      <li>Train Your Accent – Neutralize MTI and sound more confident</li>
+      <li><i class="fas fa-microphone-alt"></i> Speak Like Americans – Natural pronunciation & accent</li>
+      <li><i class="fas fa-spell-check"></i> Build Real Sentences – Practical, real-world scenarios</li>
+      <li><i class="fas fa-volume-up"></i> Perfect Your Pronunciation – Expert phonetics training</li>
+      <li><i class="fas fa-book-reader"></i> Learn Everyday Vocabulary – Useful words and phrases</li>
+      <li><i class="fas fa-language"></i> Use Expressions & Idioms – Talk fluently like a native</li>
+      <li><i class="fas fa-brain"></i> Train Your Accent – Sound confident, neutralize MTI</li>
     </ul>
   </section>
 
-  <section class="section highlight">
+  <section class="section highlight" data-aos="zoom-in">
     <h2>Course Details</h2>
     <p><strong>Duration:</strong> 6 Months</p>
     <p><strong>Format:</strong> Online & Live Interactive Classes</p>
@@ -128,32 +157,49 @@
     <p><strong>Monthly Fee:</strong> ₹299 Only</p>
   </section>
 
-  <section class="section">
+  <section class="section" data-aos="fade-up">
     <h2>Why Choose Skill-Z?</h2>
     <ul>
-      <li>Fun, engaging sessions tailored for young minds</li>
-      <li>World-class techniques simplified for kids and teens</li>
-      <li>Live support, activities, and progress tracking</li>
-      <li>Taught by experienced English trainers</li>
+      <li><i class="fas fa-smile-beam"></i> Fun & engaging sessions made for young minds</li>
+      <li><i class="fas fa-chalkboard-teacher"></i> World-class teaching simplified for all levels</li>
+      <li><i class="fas fa-user-check"></i> Live support, activities, and progress tracking</li>
+      <li><i class="fas fa-users"></i> Experienced and qualified English trainers</li>
     </ul>
   </section>
 
-  <section class="section highlight">
+  <section class="section highlight" data-aos="zoom-in-up">
     <h2>Special Offer</h2>
-    <p><strong>Get a FREE Trial Class</strong><br/>Experience the class before you commit. See the difference in just one session!</p>
+    <p><strong>🎁 FREE Trial Class</strong><br/>Experience the magic before you enroll. One session is all it takes!</p>
   </section>
 
-  <section class="section cta">
+  <section class="section bonus-section" data-aos="fade-up">
+    <h2>Bonus Features</h2>
+    <ul>
+      <li><i class="fas fa-trophy"></i> Certificate of Completion</li>
+      <li><i class="fas fa-mobile-alt"></i> Mobile-Friendly Classes</li>
+      <li><i class="fas fa-headset"></i> Personalized Mentoring</li>
+    </ul>
+  </section>
+
+  <section class="section cta" data-aos="flip-up">
     <h2>Ready to Start Your Journey to Fluent English?</h2>
     <a href="https://wa.me/917978912461" target="_blank">
-      <button>📞 Get Free Trial on WhatsApp</button>
+      <button><i class="fab fa-whatsapp"></i> Get Free Trial on WhatsApp</button>
     </a>
-    <button>Enroll Now – Only ₹299/Month!</button>
+    <a href="#">
+      <button><i class="fas fa-user-plus"></i> Enroll Now – Only ₹299/Month!</button>
+    </a>
   </section>
 
-  <footer>
+  <footer data-aos="fade-in">
     &copy; 2025 Skill-Z English Communication Lab. All rights reserved.
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
